@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Portfolio Page</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f7f7f7;
-		}
-		h1 {
-			text-align: center;
-			margin-top: 50px;
-			color: #333;
-		}
-		.image-gallery {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin: 50px auto;
-			max-width: 800px;
-		}
-		.image-gallery img {
-			margin: 10px;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-			border-radius: 5px;
-			max-width: 200px;
-		}
-	</style>
-</head>
-<body>
-	<h1>My Portfolio</h1>
-
-	<!-- Image Gallery -->
-	<div class="image-gallery">
-		<!-- Loop through all the images -->
-		<?php for ($i = 0; $i < 29; $i++) { ?>
-			<img src="<?php echo $i . '.png'; ?>" alt="Image <?php echo $i; ?>">
-		<?php } ?>
-	</div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Architecture Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-T1hcI3qQJoxILjS/yHZ8oTfT+YqnrmMCEs4oMj8tZLO+xDb+1r0E94eLr+8yOJLlVY2aAQ9xwdnmG8ODDTWbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      #top-bar {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 10px;
+      }
+      #top-bar h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      #previous-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        color: #007bff;
+      }
+      #next-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top-bar">
+      <div class="container">
+        <h1>Architecture Portfolio</h1>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img id="portfolio-image" src="images/0.png" alt="Architecture Portfolio" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6 text-right">
+        <button id="previous-btn">Previous</button>
+      </div>
+      <div class="col-md-6">
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
